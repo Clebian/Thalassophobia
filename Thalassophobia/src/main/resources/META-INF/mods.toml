@@ -1,0 +1,13 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="MIT"
+[[mods]]
+modId="thalassophobia" 
+version="1.0"
+displayName="Thalassophobia"
+logoFile="" 
+credits=""
+authors="Clebian"
+description='''
+Adds an ocean dimension
+'''
