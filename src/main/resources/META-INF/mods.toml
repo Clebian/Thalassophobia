@@ -1,13 +1,13 @@
 modLoader="javafml"
 loaderVersion="[37,)"
-license="MIT"
+license="GNU General Public License v3.0"
 [[mods]]
 modId="thalassophobia" 
-version="1.0"
+version="1.0.0"
 displayName="Thalassophobia"
-logoFile="" 
+# logoFile=""
 credits=""
-authors="Clebian"
+authors="Clebian, Pickle_Face5"
 description='''
 Adds an ocean dimension and many new ocean themed mobs and items
 '''
