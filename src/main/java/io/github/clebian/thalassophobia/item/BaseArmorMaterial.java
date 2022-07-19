@@ -1,4 +1,4 @@
-package io.github.clebian.thalassophobia.core;
+package io.github.clebian.thalassophobia.item;
 
 import java.util.function.Supplier;
 

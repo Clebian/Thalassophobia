@@ -1,6 +1,8 @@
-package io.github.clebian.thalassophobia.core.init;
+package io.github.clebian.thalassophobia.item;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
+import io.github.clebian.thalassophobia.block.BlockInit;
+import io.github.clebian.thalassophobia.entity.ModEntityTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -13,12 +15,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ItemInit {
-	private ItemInit() {
+public class ModItems {
+	private ModItems() {
 	}
 
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
@@ -53,6 +56,10 @@ public class ItemInit {
 
 	public static final RegistryObject<AxeItem> CORAL_AXE = ITEMS.register("coral_axe",
 			() -> new AxeItem(ToolMaterialInit.CORAL, 6, -3.1f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<Item> RACCOON_SPAWN_EGG = ITEMS.register("looker_spawn_egg",
+			() -> new ForgeSpawnEggItem(ModEntityTypes.LOOKER,0x010375, 0xa8ba09,
+					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	// Armor
 	public static final RegistryObject<ArmorItem> CORAL_HELMET = ITEMS.register("coral_helmet",

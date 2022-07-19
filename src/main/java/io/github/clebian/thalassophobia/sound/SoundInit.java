@@ -1,4 +1,4 @@
-package io.github.clebian.thalassophobia.core.init;
+package io.github.clebian.thalassophobia.sound;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
 import net.minecraft.resources.ResourceLocation;

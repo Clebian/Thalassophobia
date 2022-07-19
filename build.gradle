@@ -62,9 +62,11 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
   maven {url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    mavenCentral()
 }
 
 dependencies {
+    implementation 'org.jetbrains:annotations:23.0.0'
     minecraft 'net.minecraftforge:forge:1.17.1-37.1.1'
     implementation fg.deobf('software.bernie.geckolib:geckolib-1.17.1-forge:3.0.15')
 }

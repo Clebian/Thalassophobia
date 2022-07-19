@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.core.init.BlockInit;
+import io.github.clebian.thalassophobia.block.BlockInit;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.resources.ResourceLocation;

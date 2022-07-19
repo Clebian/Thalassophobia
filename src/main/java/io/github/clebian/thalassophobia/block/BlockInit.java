@@ -1,4 +1,4 @@
-package io.github.clebian.thalassophobia.core.init;
+package io.github.clebian.thalassophobia.block;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
 import net.minecraft.world.level.block.Block;
