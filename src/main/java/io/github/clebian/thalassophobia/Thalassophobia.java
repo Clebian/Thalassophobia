@@ -23,7 +23,7 @@ public class Thalassophobia {
 		SoundInit.SOUNDS.register(bus);
 		BlockInit.BLOCKS.register(bus);
 		ModItems.ITEMS.register(bus);
-		ModEntityTypes.ENTITIES.register(bus);
+		ModEntityTypes.ENTITY_TYPES.register(bus);
 
 		GeckoLib.initialize();
 
