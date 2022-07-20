@@ -2,7 +2,6 @@ package io.github.clebian.thalassophobia.event;
 
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.core.world.OreGeneration;
 import io.github.clebian.thalassophobia.entity.ModEntityTypes;
 import io.github.clebian.thalassophobia.entity.custom.LookerEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -14,10 +13,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 @Mod.EventBusSubscriber(modid = Thalassophobia.MODID, bus = Bus.MOD)
 public class ModEventBusEvents {
 
-	@SubscribeEvent
-	public static void commonSetup(FMLCommonSetupEvent event) {
-		event.enqueueWork(OreGeneration::registerOres);
-	}
 
 	@SubscribeEvent
 	public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
