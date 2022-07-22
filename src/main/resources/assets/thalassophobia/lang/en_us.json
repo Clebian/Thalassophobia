@@ -1,8 +1,12 @@
 {
-	
 	"item.thalassophobia.looker_eye": "Looker Eye",
 	"item.thalassophobia.cooked_looker_eye":"Cooked Looker Eye",
 	"item.thalassophobia.coral_infused_iron_ingot":"Coral Infused Iron Ingot",
+	"item.thalassophobia.coral_axe":"Coral Axe",
+	"item.thalassophobia.coral_hoe":"Coral Hoe",
+	"item.thalassophobia.coral_shovel":"Coral Shovel",
+	"item.thalassophobia.coral_pickaxe":"Coral Pickaxe",
+	"item.thalassophobia.coral_sword":"Coral Sword",
 	"item.thalassophobia.looker_spawn_egg":"Looker Spawn Egg",
 	"block.thalassophobia.scoria_ore": "Scoria Ore",
 	"itemGroup.thalassophobia": "Thalassophobia"
