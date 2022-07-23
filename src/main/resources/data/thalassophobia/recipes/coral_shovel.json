@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "X": {
+      "item": "thalassophobia:coral_infused_iron_ingot"
+    }
+  },
+  "result": {
+    "item": "thalassophobia:coral_shovel"
+  }
+}

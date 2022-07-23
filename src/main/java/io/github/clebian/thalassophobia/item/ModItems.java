@@ -40,6 +40,10 @@ public class ModItems {
 
 	public static final RegistryObject<Item> CORAL_INFUSED_IRON_INGOT = ITEMS.register("coral_infused_iron_ingot",
 			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<Item> SCORIA_ORE_ITEM = ITEMS.register("scoria_ore_item",
+			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
 	public static final RegistryObject<Item> SCORIA_INGOT = ITEMS.register("scoria_ingot",
 			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 	
@@ -58,6 +62,21 @@ public class ModItems {
 
 	public static final RegistryObject<AxeItem> CORAL_AXE = ITEMS.register("coral_axe",
 			() -> new AxeItem(ToolMaterialInit.CORAL, 6, -3.1f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<SwordItem> SCORIA_SWORD = ITEMS.register("scoria_sword",
+			() -> new SwordItem(ToolMaterialInit.SCORIA, 3, -2.4f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<HoeItem> SCORIA_HOE = ITEMS.register("scoria_hoe",
+			() -> new HoeItem(ToolMaterialInit.SCORIA, -2, -1, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<PickaxeItem> SCORIA_PICKAXE = ITEMS.register("scoria_pickaxe",
+			() -> new PickaxeItem(ToolMaterialInit.SCORIA, 1, -2.8f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<ShovelItem> SCORIA_SHOVEL = ITEMS.register("scoria_shovel",
+			() -> new ShovelItem(ToolMaterialInit.SCORIA, 1.5f, -3, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<AxeItem> SCORIA_AXE = ITEMS.register("scoria_axe",
+			() -> new AxeItem(ToolMaterialInit.SCORIA, 6, -3.1f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<Item> RACCOON_SPAWN_EGG = ITEMS.register("looker_spawn_egg",
 			() -> new ForgeSpawnEggItem(ModEntityTypes.LOOKER,0x010375, 0xa8ba09,
@@ -78,6 +97,22 @@ public class ModItems {
 
 	public static final RegistryObject<ArmorItem> CORAL_BOOTS = ITEMS.register("coral_boots",
 			() -> new ArmorItem(ArmorMaterialInit.CORAL, EquipmentSlot.FEET,
+					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<ArmorItem> SCORIA_HELMET = ITEMS.register("scoria_helmet",
+			() -> new ArmorItem(ArmorMaterialInit.SCORIA, EquipmentSlot.HEAD,
+					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<ArmorItem> SCORIA_CHESTPLATE = ITEMS.register("scoria_chestplate",
+			() -> new ArmorItem(ArmorMaterialInit.SCORIA, EquipmentSlot.CHEST,
+					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<ArmorItem> SCORIA_LEGGINGS = ITEMS.register("scoria_leggings",
+			() -> new ArmorItem(ArmorMaterialInit.SCORIA, EquipmentSlot.LEGS,
+					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<ArmorItem> SCORIA_BOOTS = ITEMS.register("scoria_boots",
+			() -> new ArmorItem(ArmorMaterialInit.SCORIA, EquipmentSlot.FEET,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	// Block Items
