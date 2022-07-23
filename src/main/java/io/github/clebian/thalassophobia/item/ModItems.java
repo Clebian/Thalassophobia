@@ -40,6 +40,8 @@ public class ModItems {
 
 	public static final RegistryObject<Item> CORAL_INFUSED_IRON_INGOT = ITEMS.register("coral_infused_iron_ingot",
 			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+	public static final RegistryObject<Item> SCORIA_INGOT = ITEMS.register("scoria_ingot",
+			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 	
 	// Tools
 	public static final RegistryObject<SwordItem> CORAL_SWORD = ITEMS.register("coral_sword",

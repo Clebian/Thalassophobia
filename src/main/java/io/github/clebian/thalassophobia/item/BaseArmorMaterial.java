@@ -41,10 +41,6 @@ public class BaseArmorMaterial implements ArmorMaterial {
 		// TODO Auto-generated method stub
 		return this.damageReduction[slot.getIndex()];
 	}
-	
-
-
-	
 
 	@Override
 	public int getEnchantmentValue() {
