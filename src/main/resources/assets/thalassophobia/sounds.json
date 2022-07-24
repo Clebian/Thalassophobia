@@ -1,2 +1,18 @@
 {
+  "leviathan_trilogy": {
+    "sounds": [
+      {
+      "name": "thalassophobia:leviathan_trilogy",
+      "stream": true
+      }
+    ]
+  },
+  "sunken_sea": {
+    "sounds": [
+      {
+        "name": "thalassophobia:sunken_sea",
+        "stream": true
+      }
+    ]
+  }
 }

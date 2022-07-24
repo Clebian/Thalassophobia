@@ -23,6 +23,10 @@
 	"item.thalassophobia.scoria_leggings":"Scoria Leggings",
 	"item.thalassophobia.scoria_boots":"Scoria Boots",
 	"item.thalassophobia.looker_spawn_egg":"Looker Spawn Egg",
+	"item.thalassophobia.leviathan_trilogy_music_disc": "Leviathan Trilogy Music Disc",
+	"item.thalassophobia.leviathan_trilogy_music_disc.desc": "Leviathan Trilogy - DM DOKURO",
+	"item.thalassophobia.sunken_sea_music_disc": "Sunken Sea Music Disc",
+	"item.thalassophobia.sunken_sea_music_disc.desc": "Sunken Sea - DM DOKURO",
 	"block.thalassophobia.scoria_ore": "Scoria Ore",
 	"itemGroup.thalassophobia": "Thalassophobia"
 }

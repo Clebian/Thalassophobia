@@ -1,20 +1,14 @@
 package io.github.clebian.thalassophobia.item;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.block.BlockInit;
+import io.github.clebian.thalassophobia.block.ModBlocks;
 import io.github.clebian.thalassophobia.entity.ModEntityTypes;
+import io.github.clebian.thalassophobia.sound.ModSounds;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -78,9 +72,17 @@ public class ModItems {
 	public static final RegistryObject<AxeItem> SCORIA_AXE = ITEMS.register("scoria_axe",
 			() -> new AxeItem(ToolMaterialInit.SCORIA, 6, -3.1f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
-	public static final RegistryObject<Item> RACCOON_SPAWN_EGG = ITEMS.register("looker_spawn_egg",
+	public static final RegistryObject<Item> LOOKER_SPAWN_EGG = ITEMS.register("looker_spawn_egg",
 			() -> new ForgeSpawnEggItem(ModEntityTypes.LOOKER,0x010375, 0xa8ba09,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+
+	public static final RegistryObject<Item> LEVIATHAN_TRILOGY_MUSIC_DISC = ITEMS.register("leviathan_trilogy_music_disc",
+			() -> new RecordItem(4, ModSounds.LEVIATHAN_TRILOGY,
+					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB).stacksTo(1)));
+
+	public static final RegistryObject<Item> SUNKEN_SEA_MUSIC_DISC = ITEMS.register("sunken_sea_music_disc",
+			() -> new RecordItem(4, ModSounds.SUNKEN_SEA,
+					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB).stacksTo(1)));
 
 	// Armor
 	public static final RegistryObject<ArmorItem> CORAL_HELMET = ITEMS.register("coral_helmet",
@@ -118,5 +120,5 @@ public class ModItems {
 	// Block Items
 
 	public static final RegistryObject<BlockItem> SCORIA_ORE = ITEMS.register("scoria_ore",
-			() -> new BlockItem(BlockInit.SCORIA_ORE.get(), new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new BlockItem(ModBlocks.SCORIA_ORE.get(), new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 }

@@ -5,9 +5,9 @@ license="GNU General Public License v3.0"
 modId="thalassophobia" 
 version="1.0.0"
 displayName="Thalassophobia"
-# logoFile=""
+logoFile="logo.png"
 credits=""
-authors="Clebian, Pickle_Face5"
+authors="Clebian, Pickle_Face5, Music: DM DOKURO"
 description='''
-Adds an ocean dimension and lots of new ocean themed mobs and items
+Adds 4 dimensions that represent layers of the ocean
 '''
