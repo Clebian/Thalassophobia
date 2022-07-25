@@ -14,5 +14,45 @@
         "stream": true
       }
     ]
+  },
+  "guardian_of_the_former_seas": {
+    "sounds": [
+      {
+        "name": "thalassophobia:guardian_of_the_former_seas",
+        "stream": true
+      }
+    ]
+  },
+  "hadopelagic_pressure": {
+    "sounds": [
+      {
+        "name": "thalassophobia:hadopelagic_pressure",
+        "stream": true
+      }
+    ]
+  },
+  "threats_of_the_ocean_floor": {
+    "sounds": [
+      {
+        "name": "thalassophobia:threats_of_the_ocean_floor",
+        "stream": true
+      }
+    ]
+  },
+  "void": {
+    "sounds": [
+      {
+        "name": "thalassophobia:void",
+        "stream": true
+      }
+    ]
+  },
+  "wasteland": {
+    "sounds": [
+      {
+        "name": "thalassophobia:wasteland",
+        "stream": true
+      }
+    ]
   }
 }

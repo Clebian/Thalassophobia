@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "thalassophobia:items/guardian_of_the_former_seas_music_disc"
+  }
+}
