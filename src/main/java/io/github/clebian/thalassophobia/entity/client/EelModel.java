@@ -9,16 +9,16 @@ public class EelModel extends AnimatedGeoModel<EelEntity> {
 
     @Override
     public ResourceLocation getModelLocation(EelEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "geo/eel.geo.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "geo/eel.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(EelEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/eel/eel.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/eel/eel.png");
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(EelEntity animatable) {
-        return new ResourceLocation(Thalassophobia.MODID, "animations/eel.animation.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "animations/eel.animation.json");
     }
 }

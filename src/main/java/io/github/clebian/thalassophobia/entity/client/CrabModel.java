@@ -9,16 +9,16 @@ public class CrabModel extends AnimatedGeoModel<CrabEntity> {
 
     @Override
     public ResourceLocation getModelLocation(CrabEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "geo/crab.geo.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "geo/crab.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(CrabEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/crab/crab.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/crab/crab.png");
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(CrabEntity animatable) {
-        return new ResourceLocation(Thalassophobia.MODID, "animations/crab.animation.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "animations/crab.animation.json");
     }
 }

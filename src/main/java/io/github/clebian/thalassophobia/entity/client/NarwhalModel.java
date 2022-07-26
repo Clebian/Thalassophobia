@@ -9,16 +9,16 @@ public class NarwhalModel extends AnimatedGeoModel<NarwhalEntity> {
 
     @Override
     public ResourceLocation getModelLocation(NarwhalEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "geo/narwhal.geo.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "geo/narwhal.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(NarwhalEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/narwhal/narwhal.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/narwhal/narwhal.png");
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(NarwhalEntity animatable) {
-        return new ResourceLocation(Thalassophobia.MODID, "animations/narwhal.animation.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "animations/narwhal.animation.json");
     }
 }

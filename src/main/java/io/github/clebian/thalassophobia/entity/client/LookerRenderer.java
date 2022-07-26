@@ -18,7 +18,7 @@ public class LookerRenderer extends GeoEntityRenderer<LookerEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(LookerEntity instance) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/looker/looker.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/looker/looker.png");
     }
 
     @Override

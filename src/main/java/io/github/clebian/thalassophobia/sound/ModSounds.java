@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public final class ModSounds {
 
 	public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS,
-			Thalassophobia.MODID);
+			Thalassophobia.MOD_ID);
 			
 	public static RegistryObject<SoundEvent> LEVIATHAN_TRILOGY = createEvent("leviathan_trilogy");
 	public static RegistryObject<SoundEvent> SUNKEN_SEA= createEvent("sunken_sea");
@@ -24,7 +24,7 @@ public final class ModSounds {
 
 
 	public static RegistryObject<SoundEvent> createEvent(String sound){
-		return SOUND_EVENTS.register(sound, () -> new SoundEvent(new ResourceLocation(Thalassophobia.MODID, sound)));
+		return SOUND_EVENTS.register(sound, () -> new SoundEvent(new ResourceLocation(Thalassophobia.MOD_ID, sound)));
 	}
 
 	public static void register(IEventBus bus){

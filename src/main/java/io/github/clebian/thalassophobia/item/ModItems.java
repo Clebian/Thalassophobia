@@ -3,6 +3,7 @@ package io.github.clebian.thalassophobia.item;
 import io.github.clebian.thalassophobia.Thalassophobia;
 import io.github.clebian.thalassophobia.block.ModBlocks;
 import io.github.clebian.thalassophobia.entity.ModEntityTypes;
+import io.github.clebian.thalassophobia.item.custom.CatalystItem;
 import io.github.clebian.thalassophobia.item.custom.OxygenSyringeItem;
 import io.github.clebian.thalassophobia.sound.ModSounds;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -20,7 +21,7 @@ public class ModItems {
 	}
 
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
-			Thalassophobia.MODID);
+			Thalassophobia.MOD_ID);
 
 	// Items
 
@@ -39,8 +40,10 @@ public class ModItems {
 	public static final RegistryObject<Item> SCORIA_ORE_ITEM = ITEMS.register("scoria_ore_item",
 			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
-	public static final RegistryObject<Item> SCORIA_INGOT = ITEMS.register("scoria_ingot",
-			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+	/*public static final RegistryObject<Item> SCORIA_INGOT = ITEMS.register("scoria_ingot",
+			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));*/
+
+	public static final RegistryObject<Item> SCORIA_INGOT = ITEMS.register("scoria_ingot", CatalystItem::new);
 	
 	// Tools
 	public static final RegistryObject<SwordItem> CORAL_SWORD = ITEMS.register("coral_sword",

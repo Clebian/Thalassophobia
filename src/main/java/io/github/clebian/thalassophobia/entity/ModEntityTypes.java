@@ -12,33 +12,33 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModEntityTypes {
 	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-			DeferredRegister.create(ForgeRegistries.ENTITIES, Thalassophobia.MODID);
+			DeferredRegister.create(ForgeRegistries.ENTITIES, Thalassophobia.MOD_ID);
 
 	public static final RegistryObject<EntityType<LookerEntity>> LOOKER =
 			ENTITY_TYPES.register("looker",
 					() -> EntityType.Builder.of(LookerEntity::new, MobCategory.CREATURE)
 							.sized(0.8f, 0.6f)
-							.build(new ResourceLocation(Thalassophobia.MODID, "looker").toString()));
+							.build(new ResourceLocation(Thalassophobia.MOD_ID, "looker").toString()));
 	public static final RegistryObject<EntityType<AnglerFishEntity>> ANGLER_FISH =
 			ENTITY_TYPES.register("angler_fish",
 					() -> EntityType.Builder.of(AnglerFishEntity::new, MobCategory.CREATURE)
 							.sized(0.8f, 0.6f)
-							.build(new ResourceLocation(Thalassophobia.MODID, "angler_fish").toString()));
+							.build(new ResourceLocation(Thalassophobia.MOD_ID, "angler_fish").toString()));
 	public static final RegistryObject<EntityType<CrabEntity>> CRAB =
 			ENTITY_TYPES.register("crab",
 					() -> EntityType.Builder.of(CrabEntity::new, MobCategory.CREATURE)
 							.sized(0.8f, 0.6f)
-							.build(new ResourceLocation(Thalassophobia.MODID, "crab").toString()));
+							.build(new ResourceLocation(Thalassophobia.MOD_ID, "crab").toString()));
 	public static final RegistryObject<EntityType<EelEntity>> EEL =
 			ENTITY_TYPES.register("eel",
 					() -> EntityType.Builder.of(EelEntity::new, MobCategory.CREATURE)
 							.sized(0.8f, 0.6f)
-							.build(new ResourceLocation(Thalassophobia.MODID, "eel").toString()));
+							.build(new ResourceLocation(Thalassophobia.MOD_ID, "eel").toString()));
 	public static final RegistryObject<EntityType<NarwhalEntity>> NARWHAL =
 			ENTITY_TYPES.register("narwhal",
 					() -> EntityType.Builder.of(NarwhalEntity::new, MobCategory.CREATURE)
 							.sized(0.8f, 0.6f)
-							.build(new ResourceLocation(Thalassophobia.MODID, "narwhal").toString()));
+							.build(new ResourceLocation(Thalassophobia.MOD_ID, "narwhal").toString()));
 
 
 	public static void register(IEventBus eventBus) {

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=z": { "model": "thalassophobia:block/twilight_layer_portal_ew" },
+    "axis=x": { "model": "thalassophobia:block/twilight_layer_portal_ns" }
+  }
+}

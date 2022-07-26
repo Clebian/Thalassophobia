@@ -18,7 +18,7 @@ public class EelRenderer extends GeoEntityRenderer<EelEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(EelEntity instance) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/eel/eel.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/eel/eel.png");
     }
 
     @Override

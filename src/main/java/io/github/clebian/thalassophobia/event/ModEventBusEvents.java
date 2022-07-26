@@ -9,7 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
-@Mod.EventBusSubscriber(modid = Thalassophobia.MODID, bus = Bus.MOD)
+@Mod.EventBusSubscriber(modid = Thalassophobia.MOD_ID, bus = Bus.MOD)
 public class ModEventBusEvents {
 
 	@SubscribeEvent

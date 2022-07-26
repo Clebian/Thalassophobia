@@ -18,7 +18,7 @@ public class NarwhalRenderer extends GeoEntityRenderer<NarwhalEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(NarwhalEntity instance) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/narwhal/narwhal.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/narwhal/narwhal.png");
     }
 
     @Override

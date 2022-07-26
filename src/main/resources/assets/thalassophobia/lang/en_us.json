@@ -27,6 +27,7 @@
 	"item.thalassophobia.crab_spawn_egg":"Crab Spawn Egg",
 	"item.thalassophobia.eel_spawn_egg":"Eel Spawn Egg",
 	"item.thalassophobia.narwhal_spawn_egg":"Narwhal Spawn Egg",
+	"item.thalassophobia.oxygen_syringe":"Oxygen Syringe",
 	"item.thalassophobia.leviathan_trilogy_music_disc": "Leviathan Trilogy Music Disc",
 	"item.thalassophobia.leviathan_trilogy_music_disc.desc": "Leviathan Trilogy - DM DOKURO",
 	"item.thalassophobia.sunken_sea_music_disc": "Sunken Sea Music Disc",
@@ -41,6 +42,11 @@
 	"item.thalassophobia.void_music_disc.desc": "Void - DM DOKURO",
 	"item.thalassophobia.wasteland_music_disc": "Wasteland Music Disc",
 	"item.thalassophobia.wasteland_music_disc.desc": "Wasteland - DM DOKURO",
+	"tooltip.thalassophobia.oxygen_syringe.tooltip.shift":"Hit an entity to give it Water Breathing for 1 minute",
+	"tooltip.thalassophobia.oxygen_syringe.tooltip":"Press §eSHIFT§r for more information",
 	"block.thalassophobia.scoria_ore": "Scoria Ore",
 	"itemGroup.thalassophobia": "Thalassophobia"
+
+
 }
+

@@ -9,16 +9,16 @@ public class LookerModel extends AnimatedGeoModel<LookerEntity> {
 
     @Override
     public ResourceLocation getModelLocation(LookerEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "geo/looker.geo.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "geo/looker.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(LookerEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/looker/looker.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/looker/looker.png");
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(LookerEntity animatable) {
-        return new ResourceLocation(Thalassophobia.MODID, "animations/looker.animation.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "animations/looker.animation.json");
     }
 }

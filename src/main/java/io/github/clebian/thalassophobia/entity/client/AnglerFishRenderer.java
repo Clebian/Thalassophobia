@@ -18,7 +18,7 @@ public class AnglerFishRenderer extends GeoEntityRenderer<AnglerFishEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(AnglerFishEntity instance) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/angler_fish/angler_fish.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/angler_fish/angler_fish.png");
     }
 
     @Override

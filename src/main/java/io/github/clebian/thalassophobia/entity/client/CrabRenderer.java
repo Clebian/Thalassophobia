@@ -18,7 +18,7 @@ public class CrabRenderer extends GeoEntityRenderer<CrabEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(CrabEntity instance) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/crab/crab.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/crab/crab.png");
     }
 
     @Override

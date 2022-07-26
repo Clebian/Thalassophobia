@@ -9,16 +9,16 @@ public class AnglerFishModel extends AnimatedGeoModel<AnglerFishEntity> {
 
     @Override
     public ResourceLocation getModelLocation(AnglerFishEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "geo/angler_fish.geo.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "geo/angler_fish.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(AnglerFishEntity object) {
-        return new ResourceLocation(Thalassophobia.MODID, "textures/entity/angler_fish/angler_fish.png");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/angler_fish/angler_fish.png");
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(AnglerFishEntity animatable) {
-        return new ResourceLocation(Thalassophobia.MODID, "animations/angler_fish.animation.json");
+        return new ResourceLocation(Thalassophobia.MOD_ID, "animations/angler_fish.animation.json");
     }
 }
