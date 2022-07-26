@@ -6,8 +6,8 @@ modId="thalassophobia"
 version="1.0.0"
 displayName="Thalassophobia"
 logoFile="logo.png"
-credits=""
-authors="Clebian, Pickle_Face5, Music: DM DOKURO"
+credits="Music by DM DOKURO"
+authors="Clebian, Pickle_Face5"
 description='''
 Adds 4 dimensions that represent layers of the ocean
 '''
