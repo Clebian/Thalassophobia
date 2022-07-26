@@ -1,8 +1,8 @@
 package io.github.clebian.thalassophobia.item;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.util.BlocksInit;
 import io.github.clebian.thalassophobia.block.TwilightLayerPortalBlock;
+import io.github.clebian.thalassophobia.util.BlocksInit;
 import io.github.clebian.thalassophobia.world.dimension.ModDimensions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

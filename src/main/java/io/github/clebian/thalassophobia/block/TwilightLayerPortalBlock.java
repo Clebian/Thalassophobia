@@ -96,8 +96,8 @@ public class TwilightLayerPortalBlock extends Block {
         if (TwilightLayerPortalBlock$size.isValid() && TwilightLayerPortalBlock$size.portalBlockCount == 0) {
             return TwilightLayerPortalBlock$size;
         } else {
-            TwilightLayerPortalBlock.Size TwilightLayerPortalBlock$size1 = new Size(worldIn, pos, Direction.Axis.Z);
-            return TwilightLayerPortalBlock$size1.isValid() && TwilightLayerPortalBlock$size1.portalBlockCount == 0 ? TwilightLayerPortalBlock$size1 : null;
+            TwilightLayerPortalBlock.Size TwilightPortalBlock$size1 = new Size(worldIn, pos, Direction.Axis.Z);
+            return TwilightPortalBlock$size1.isValid() && TwilightPortalBlock$size1.portalBlockCount == 0 ? TwilightPortalBlock$size1 : null;
         }
     }
 
