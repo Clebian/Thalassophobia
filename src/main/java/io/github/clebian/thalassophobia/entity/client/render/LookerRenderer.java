@@ -29,4 +29,6 @@ public class LookerRenderer extends GeoEntityRenderer<LookerEntity> {
         stack.scale(0.8F, 0.8F, 0.8F);
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }
+
+
 }

@@ -8,6 +8,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.FollowFlockLeaderGoal;
 import net.minecraft.world.entity.animal.AbstractSchoolingFish;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.item.ItemStack;
@@ -21,7 +22,11 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+import javax.annotation.Nullable;
+
 public class LookerEntity extends AbstractSchoolingFish implements IAnimatable {
+    @Nullable
+    private AbstractSchoolingFish leader;
     private AnimationFactory factory = new AnimationFactory(this);
 
     public LookerEntity(EntityType<? extends AbstractSchoolingFish> entityType, Level level) {
@@ -31,17 +36,26 @@ public class LookerEntity extends AbstractSchoolingFish implements IAnimatable {
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 6.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.6f).build();
-    }
-
-    @Override
-    protected SoundEvent getFlopSound() {
-        return null;
+                .add(Attributes.MOVEMENT_SPEED, 0.6f)
+                .build();
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.looker.swim", true));
         return PlayState.CONTINUE;
+    }
+
+    @Override
+    public void stopFollowing() {
+        if (this.leader != null) {
+            this.leader.removeFollower();
+            this.leader = null;
+        }
+    }
+
+    protected void registerGoals() {
+        super.registerGoals();
+        this.goalSelector.addGoal(5, new FollowFlockLeaderGoal(this));
     }
 
     @Override
@@ -55,31 +69,20 @@ public class LookerEntity extends AbstractSchoolingFish implements IAnimatable {
         return this.factory;
     }
 
-    protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
-    }
-
-    public void aiStep() {
-        if (!this.isInWater() && this.onGround && this.verticalCollision) {
-            this.setDeltaMovement(this.getDeltaMovement().add((double)((this.random.nextFloat() * 2.0F - 1.0F) * 0.05F), (double)0.4F, (double)((this.random.nextFloat() * 2.0F - 1.0F) * 0.05F)));
-            this.onGround = false;
-            this.hasImpulse = true;
-            this.playSound(this.getFlopSound(), this.getSoundVolume(), this.getVoicePitch());
-        }
-
-        super.aiStep();
-    }
-
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.CAT_STRAY_AMBIENT;
+        return null;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.DOLPHIN_HURT;
+        return SoundEvents.COD_HURT;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.DOLPHIN_DEATH;
+        return SoundEvents.COD_DEATH;
+    }
+
+    protected SoundEvent getFlopSound() {
+        return SoundEvents.COD_FLOP;
     }
 
     protected float getSoundVolume() {
