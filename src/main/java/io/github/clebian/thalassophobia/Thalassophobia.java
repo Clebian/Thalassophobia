@@ -1,5 +1,6 @@
 package io.github.clebian.thalassophobia;
 
+import com.mojang.logging.LogUtils;
 import io.github.clebian.thalassophobia.util.BlocksInit;
 import io.github.clebian.thalassophobia.util.EntityTypesInit;
 import io.github.clebian.thalassophobia.util.ItemsInit;
@@ -16,11 +17,13 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
 @Mod(Thalassophobia.MOD_ID)
 public class Thalassophobia {
 	public static final String MOD_ID = "thalassophobia";
+	public static final Logger LOGGER = LogUtils.getLogger();
 
 	public Thalassophobia() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
