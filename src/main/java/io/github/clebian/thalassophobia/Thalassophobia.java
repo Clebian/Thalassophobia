@@ -1,11 +1,11 @@
 package io.github.clebian.thalassophobia;
 
-import io.github.clebian.thalassophobia.block.ModBlocks;
-import io.github.clebian.thalassophobia.entity.ModEntityTypes;
-import io.github.clebian.thalassophobia.item.ModItems;
+import io.github.clebian.thalassophobia.util.BlocksInit;
+import io.github.clebian.thalassophobia.util.EntityTypesInit;
+import io.github.clebian.thalassophobia.util.ItemsInit;
 import io.github.clebian.thalassophobia.sound.ModSounds;
-import io.github.clebian.thalassophobia.entity.client.LookerRenderer;
-import io.github.clebian.thalassophobia.villager.ModPOIs;
+import io.github.clebian.thalassophobia.entity.client.render.LookerRenderer;
+import io.github.clebian.thalassophobia.entity.npc.ModPOIs;
 import io.github.clebian.thalassophobia.world.dimension.ModDimensions;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -25,10 +25,10 @@ public class Thalassophobia {
 	public Thalassophobia() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		BlocksInit.BLOCKS.register(bus);
+		ItemsInit.ITEMS.register(bus);
+		EntityTypesInit.ENTITY_TYPES.register(bus);
 		ModSounds.SOUND_EVENTS.register(bus);
-		ModBlocks.BLOCKS.register(bus);
-		ModItems.ITEMS.register(bus);
-		ModEntityTypes.ENTITY_TYPES.register(bus);
 		ModDimensions.register();
 		ModPOIs.register(bus);
 
@@ -41,13 +41,13 @@ public class Thalassophobia {
 
 		@Override
 		public ItemStack makeIcon() {
-			return ModItems.SCORIA_ORE_ITEM.get().getDefaultInstance();
+			return ItemsInit.SCORIA_ORE_ITEM.get().getDefaultInstance();
 		}
 	};
 
 	private void clientSetup(final FMLClientSetupEvent event){
-		EntityRenderers.register(ModEntityTypes.LOOKER.get(), LookerRenderer::new);
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.TWILIGHT_LAYER_PORTAL.get(), RenderType.translucent());
+		EntityRenderers.register(EntityTypesInit.LOOKER.get(), LookerRenderer::new);
+		ItemBlockRenderTypes.setRenderLayer(BlocksInit.TWILIGHT_LAYER_PORTAL.get(), RenderType.translucent());
 	}
 
 }

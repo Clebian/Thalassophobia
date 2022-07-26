@@ -1,10 +1,10 @@
-package io.github.clebian.thalassophobia.item;
+package io.github.clebian.thalassophobia.util;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.block.ModBlocks;
-import io.github.clebian.thalassophobia.entity.ModEntityTypes;
-import io.github.clebian.thalassophobia.item.custom.CatalystItem;
-import io.github.clebian.thalassophobia.item.custom.OxygenSyringeItem;
+import io.github.clebian.thalassophobia.item.BaseArmorMaterial;
+import io.github.clebian.thalassophobia.item.BaseToolMaterial;
+import io.github.clebian.thalassophobia.item.CatalystItem;
+import io.github.clebian.thalassophobia.item.OxygenSyringeItem;
 import io.github.clebian.thalassophobia.sound.ModSounds;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -16,15 +16,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModItems {
-	private ModItems() {
-	}
+@SuppressWarnings("unused")
+public class ItemsInit {
 
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
 			Thalassophobia.MOD_ID);
 
 	// Items
-
 	public static final RegistryObject<Item> LOOKER_EYE = ITEMS.register("looker_eye",
 			() -> new Item(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)
 					.food(new FoodProperties.Builder().nutrition(2).saturationMod(1.2f).meat()
@@ -45,55 +43,56 @@ public class ModItems {
 
 	public static final RegistryObject<Item> SCORIA_INGOT = ITEMS.register("scoria_ingot", CatalystItem::new);
 	
+	
 	// Tools
 	public static final RegistryObject<SwordItem> CORAL_SWORD = ITEMS.register("coral_sword",
-			() -> new SwordItem(ToolMaterialInit.CORAL, 3, -2.4f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new SwordItem(BaseToolMaterial.CORAL, 3, -2.4f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<HoeItem> CORAL_HOE = ITEMS.register("coral_hoe",
-			() -> new HoeItem(ToolMaterialInit.CORAL, -2, -1, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new HoeItem(BaseToolMaterial.CORAL, -2, -1, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<PickaxeItem> CORAL_PICKAXE = ITEMS.register("coral_pickaxe",
-			() -> new PickaxeItem(ToolMaterialInit.CORAL, 1, -2.8f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new PickaxeItem(BaseToolMaterial.CORAL, 1, -2.8f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ShovelItem> CORAL_SHOVEL = ITEMS.register("coral_shovel",
-			() -> new ShovelItem(ToolMaterialInit.CORAL, 1.5f, -3, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new ShovelItem(BaseToolMaterial.CORAL, 1.5f, -3, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<AxeItem> CORAL_AXE = ITEMS.register("coral_axe",
-			() -> new AxeItem(ToolMaterialInit.CORAL, 6, -3.1f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new AxeItem(BaseToolMaterial.CORAL, 6, -3.1f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<SwordItem> SCORIA_SWORD = ITEMS.register("scoria_sword",
-			() -> new SwordItem(ToolMaterialInit.SCORIA, 3, -2.4f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new SwordItem(BaseToolMaterial.SCORIA, 3, -2.4f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<HoeItem> SCORIA_HOE = ITEMS.register("scoria_hoe",
-			() -> new HoeItem(ToolMaterialInit.SCORIA, -2, -1, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new HoeItem(BaseToolMaterial.SCORIA, -2, -1, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<PickaxeItem> SCORIA_PICKAXE = ITEMS.register("scoria_pickaxe",
-			() -> new PickaxeItem(ToolMaterialInit.SCORIA, 1, -2.8f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new PickaxeItem(BaseToolMaterial.SCORIA, 1, -2.8f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ShovelItem> SCORIA_SHOVEL = ITEMS.register("scoria_shovel",
-			() -> new ShovelItem(ToolMaterialInit.SCORIA, 1.5f, -3, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new ShovelItem(BaseToolMaterial.SCORIA, 1.5f, -3, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<AxeItem> SCORIA_AXE = ITEMS.register("scoria_axe",
-			() -> new AxeItem(ToolMaterialInit.SCORIA, 6, -3.1f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new AxeItem(BaseToolMaterial.SCORIA, 6, -3.1f, new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<Item> LOOKER_SPAWN_EGG = ITEMS.register("looker_spawn_egg",
-			() -> new ForgeSpawnEggItem(ModEntityTypes.LOOKER,0x010375, 0xa8ba09,
+			() -> new ForgeSpawnEggItem(EntityTypesInit.LOOKER,0x010375, 0xa8ba09,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<Item> ANGLER_FISH_SPAWN_EGG = ITEMS.register("angler_fish_spawn_egg",
-			() -> new ForgeSpawnEggItem(ModEntityTypes.ANGLER_FISH,0x765032, 0xc9c9c9,
+			() -> new ForgeSpawnEggItem(EntityTypesInit.ANGLER_FISH,0x765032, 0xc9c9c9,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<Item> EEL_SPAWN_EGG = ITEMS.register("eel_spawn_egg",
-			() -> new ForgeSpawnEggItem(ModEntityTypes.EEL,0xa8b701, 0x5e6605,
+			() -> new ForgeSpawnEggItem(EntityTypesInit.EEL,0xa8b701, 0x5e6605,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<Item> NARWHAL_SPAWN_EGG = ITEMS.register("narwhal_spawn_egg",
-			() -> new ForgeSpawnEggItem(ModEntityTypes.NARWHAL,0x545454, 0xd3d097,
+			() -> new ForgeSpawnEggItem(EntityTypesInit.NARWHAL,0x545454, 0xd3d097,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<Item> CRAB_SPAWN_EGG = ITEMS.register("crab_spawn_egg",
-			() -> new ForgeSpawnEggItem(ModEntityTypes.CRAB,0x7b3109, 0xb44407,
+			() -> new ForgeSpawnEggItem(EntityTypesInit.CRAB,0x7b3109, 0xb44407,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<Item> LEVIATHAN_TRILOGY_MUSIC_DISC = ITEMS.register("leviathan_trilogy_music_disc",
@@ -127,41 +126,42 @@ public class ModItems {
 	public static final RegistryObject<Item> OXYGEN_SYRINGE = ITEMS.register("oxygen_syringe",
 			() -> new OxygenSyringeItem(new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB).stacksTo(1)));
 
+	
 	// Armor
 	public static final RegistryObject<ArmorItem> CORAL_HELMET = ITEMS.register("coral_helmet",
-			() -> new ArmorItem(ArmorMaterialInit.CORAL, EquipmentSlot.HEAD,
+			() -> new ArmorItem(BaseArmorMaterial.CORAL, EquipmentSlot.HEAD,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ArmorItem> CORAL_CHESTPLATE = ITEMS.register("coral_chestplate",
-			() -> new ArmorItem(ArmorMaterialInit.CORAL, EquipmentSlot.CHEST,
+			() -> new ArmorItem(BaseArmorMaterial.CORAL, EquipmentSlot.CHEST,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ArmorItem> CORAL_LEGGINGS = ITEMS.register("coral_leggings",
-			() -> new ArmorItem(ArmorMaterialInit.CORAL, EquipmentSlot.LEGS,
+			() -> new ArmorItem(BaseArmorMaterial.CORAL, EquipmentSlot.LEGS,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ArmorItem> CORAL_BOOTS = ITEMS.register("coral_boots",
-			() -> new ArmorItem(ArmorMaterialInit.CORAL, EquipmentSlot.FEET,
+			() -> new ArmorItem(BaseArmorMaterial.CORAL, EquipmentSlot.FEET,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ArmorItem> SCORIA_HELMET = ITEMS.register("scoria_helmet",
-			() -> new ArmorItem(ArmorMaterialInit.SCORIA, EquipmentSlot.HEAD,
+			() -> new ArmorItem(BaseArmorMaterial.SCORIA, EquipmentSlot.HEAD,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ArmorItem> SCORIA_CHESTPLATE = ITEMS.register("scoria_chestplate",
-			() -> new ArmorItem(ArmorMaterialInit.SCORIA, EquipmentSlot.CHEST,
+			() -> new ArmorItem(BaseArmorMaterial.SCORIA, EquipmentSlot.CHEST,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ArmorItem> SCORIA_LEGGINGS = ITEMS.register("scoria_leggings",
-			() -> new ArmorItem(ArmorMaterialInit.SCORIA, EquipmentSlot.LEGS,
+			() -> new ArmorItem(BaseArmorMaterial.SCORIA, EquipmentSlot.LEGS,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
 	public static final RegistryObject<ArmorItem> SCORIA_BOOTS = ITEMS.register("scoria_boots",
-			() -> new ArmorItem(ArmorMaterialInit.SCORIA, EquipmentSlot.FEET,
+			() -> new ArmorItem(BaseArmorMaterial.SCORIA, EquipmentSlot.FEET,
 					new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 
+	
 	// Block Items
-
 	public static final RegistryObject<BlockItem> SCORIA_ORE = ITEMS.register("scoria_ore",
-			() -> new BlockItem(ModBlocks.SCORIA_ORE.get(), new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
+			() -> new BlockItem(BlocksInit.SCORIA_ORE.get(), new Item.Properties().tab(Thalassophobia.THALASSOPHOBIA_TAB)));
 }

@@ -1,7 +1,7 @@
-package io.github.clebian.thalassophobia.entity;
+package io.github.clebian.thalassophobia.util;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.entity.custom.*;
+import io.github.clebian.thalassophobia.entity.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -10,7 +10,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModEntityTypes {
+@SuppressWarnings("unused")
+public class EntityTypesInit {
 	public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
 			DeferredRegister.create(ForgeRegistries.ENTITIES, Thalassophobia.MOD_ID);
 

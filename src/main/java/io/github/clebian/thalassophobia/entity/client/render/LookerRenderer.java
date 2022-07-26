@@ -1,9 +1,10 @@
-package io.github.clebian.thalassophobia.entity.client;
+package io.github.clebian.thalassophobia.entity.client.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.entity.custom.LookerEntity;
+import io.github.clebian.thalassophobia.entity.LookerEntity;
+import io.github.clebian.thalassophobia.entity.client.LookerModel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

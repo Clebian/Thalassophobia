@@ -1,8 +1,8 @@
-package io.github.clebian.thalassophobia.item.custom;
+package io.github.clebian.thalassophobia.item;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.block.ModBlocks;
-import io.github.clebian.thalassophobia.block.custom.TwilightLayerPortalBlock;
+import io.github.clebian.thalassophobia.util.BlocksInit;
+import io.github.clebian.thalassophobia.block.TwilightLayerPortalBlock;
 import io.github.clebian.thalassophobia.world.dimension.ModDimensions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,7 +30,7 @@ public class CatalystItem extends Item {
                     || context.getPlayer().level.dimension() == Level.OVERWORLD) {
                 for(Direction direction : Direction.Plane.VERTICAL) {
                     BlockPos framePos = context.getClickedPos().relative(direction);
-                    if(((TwilightLayerPortalBlock) ModBlocks.TWILIGHT_LAYER_PORTAL.get()).trySpawnPortal(context.getLevel(), framePos)) {
+                    if(((TwilightLayerPortalBlock) BlocksInit.TWILIGHT_LAYER_PORTAL.get()).trySpawnPortal(context.getLevel(), framePos)) {
                         context.getLevel().playSound(context.getPlayer(), framePos,
                                 SoundEvents.PORTAL_TRIGGER, SoundSource.BLOCKS, 1.0F, 1.0F);
                         return InteractionResult.CONSUME;

@@ -1,4 +1,4 @@
-package io.github.clebian.thalassophobia.entity.custom;
+package io.github.clebian.thalassophobia.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

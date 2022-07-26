@@ -1,21 +1,18 @@
-package io.github.clebian.thalassophobia.entity.custom;
+package io.github.clebian.thalassophobia.entity;
 
+import io.github.clebian.thalassophobia.util.ItemsInit;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.animal.AbstractSchoolingFish;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -24,43 +21,26 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class EelEntity extends Animal implements IAnimatable {
+public class LookerEntity extends AbstractSchoolingFish implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public EelEntity(EntityType<? extends Animal> entityType, Level level) {
+    public LookerEntity(EntityType<? extends AbstractSchoolingFish> entityType, Level level) {
         super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 20.0D)
-                .add(Attributes.ATTACK_DAMAGE, 3.0f)
-                .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
+                .add(Attributes.MAX_HEALTH, 6.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.6f).build();
     }
 
-    protected void registerGoals() {
-        this.goalSelector.addGoal(1, new FloatGoal(this));
-        this.goalSelector.addGoal(2, new PanicGoal(this, 1.25D));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
-    }
-
-    @Nullable
     @Override
-    public AgeableMob getBreedOffspring(ServerLevel p_146743_, AgeableMob p_146744_) {
+    protected SoundEvent getFlopSound() {
         return null;
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        /*if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.looker.swim", true));
-            return PlayState.CONTINUE;
-        }
-
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.looker.swim", true));*/
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.looker.swim", true));
         return PlayState.CONTINUE;
     }
 
@@ -79,6 +59,17 @@ public class EelEntity extends Animal implements IAnimatable {
         this.playSound(SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, 0.15F, 1.0F);
     }
 
+    public void aiStep() {
+        if (!this.isInWater() && this.onGround && this.verticalCollision) {
+            this.setDeltaMovement(this.getDeltaMovement().add((double)((this.random.nextFloat() * 2.0F - 1.0F) * 0.05F), (double)0.4F, (double)((this.random.nextFloat() * 2.0F - 1.0F) * 0.05F)));
+            this.onGround = false;
+            this.hasImpulse = true;
+            this.playSound(this.getFlopSound(), this.getSoundVolume(), this.getVoicePitch());
+        }
+
+        super.aiStep();
+    }
+
     protected SoundEvent getAmbientSound() {
         return SoundEvents.CAT_STRAY_AMBIENT;
     }
@@ -95,4 +86,8 @@ public class EelEntity extends Animal implements IAnimatable {
         return 0.2F;
     }
 
+    @Override
+    public ItemStack getBucketItemStack() {
+        return new ItemStack(ItemsInit.COOKED_LOOKER_EYE.get());
+    }
 }

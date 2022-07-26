@@ -1,4 +1,4 @@
-package io.github.clebian.thalassophobia.entity.custom;
+package io.github.clebian.thalassophobia.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -18,16 +18,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class AnglerFishEntity extends Animal implements IAnimatable {
+public class NarwhalEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public AnglerFishEntity(EntityType<? extends Animal> entityType, Level level) {
+    public NarwhalEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -54,10 +53,7 @@ public class AnglerFishEntity extends Animal implements IAnimatable {
         return null;
     }
 
-
-
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-
         /*if (event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.looker.swim", true));
             return PlayState.CONTINUE;

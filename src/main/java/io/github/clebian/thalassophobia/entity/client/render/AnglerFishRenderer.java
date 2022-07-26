@@ -1,28 +1,29 @@
-package io.github.clebian.thalassophobia.entity.client;
+package io.github.clebian.thalassophobia.entity.client.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.entity.custom.EelEntity;
+import io.github.clebian.thalassophobia.entity.AnglerFishEntity;
+import io.github.clebian.thalassophobia.entity.client.AnglerFishModel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
-public class EelRenderer extends GeoEntityRenderer<EelEntity> {
-    public EelRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new EelModel());
+public class AnglerFishRenderer extends GeoEntityRenderer<AnglerFishEntity> {
+    public AnglerFishRenderer(EntityRendererProvider.Context renderManager) {
+        super(renderManager, new AnglerFishModel());
         this.shadowRadius = 0.3f;
     }
 
     @Override
-    public ResourceLocation getTextureLocation(EelEntity instance) {
-        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/eel/eel.png");
+    public ResourceLocation getTextureLocation(AnglerFishEntity instance) {
+        return new ResourceLocation(Thalassophobia.MOD_ID, "textures/entity/angler_fish/angler_fish.png");
     }
 
     @Override
-    public RenderType getRenderType(EelEntity animatable, float partialTicks, PoseStack stack,
+    public RenderType getRenderType(AnglerFishEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
         stack.scale(0.8F, 0.8F, 0.8F);

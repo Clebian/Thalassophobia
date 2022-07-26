@@ -1,8 +1,7 @@
-package io.github.clebian.thalassophobia.block;
+package io.github.clebian.thalassophobia.util;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.block.custom.TwilightLayerPortalBlock;
-import io.github.clebian.thalassophobia.item.ModItems;
+import io.github.clebian.thalassophobia.block.TwilightLayerPortalBlock;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -13,10 +12,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
-public class ModBlocks {
-
-	private ModBlocks() {}
-	
+@SuppressWarnings("unused")
+public class BlocksInit {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Thalassophobia.MOD_ID);
 	
 	public static final RegistryObject<Block> SCORIA_ORE = BLOCKS.register("scoria_ore",
@@ -40,7 +37,7 @@ public class ModBlocks {
 
 	private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
 																			CreativeModeTab tab) {
-		return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+		return ItemsInit.ITEMS.register(name, () -> new BlockItem(block.get(),
 				new Item.Properties().tab(tab)));
 	}
 

@@ -1,7 +1,7 @@
 package io.github.clebian.thalassophobia.entity.client;
 
 import io.github.clebian.thalassophobia.Thalassophobia;
-import io.github.clebian.thalassophobia.entity.custom.NarwhalEntity;
+import io.github.clebian.thalassophobia.entity.NarwhalEntity;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

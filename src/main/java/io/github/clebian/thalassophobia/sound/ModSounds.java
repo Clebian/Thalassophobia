@@ -26,8 +26,4 @@ public final class ModSounds {
 	public static RegistryObject<SoundEvent> createEvent(String sound){
 		return SOUND_EVENTS.register(sound, () -> new SoundEvent(new ResourceLocation(Thalassophobia.MOD_ID, sound)));
 	}
-
-	public static void register(IEventBus bus){
-		SOUND_EVENTS.register(bus);
-	}
 }

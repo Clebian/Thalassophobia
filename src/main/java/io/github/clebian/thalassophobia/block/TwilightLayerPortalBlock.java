@@ -1,6 +1,6 @@
-package io.github.clebian.thalassophobia.block.custom;
+package io.github.clebian.thalassophobia.block;
 
-import io.github.clebian.thalassophobia.block.ModBlocks;
+import io.github.clebian.thalassophobia.util.BlocksInit;
 import io.github.clebian.thalassophobia.util.ModTags;
 import io.github.clebian.thalassophobia.world.dimension.ModDimensions;
 import io.github.clebian.thalassophobia.world.dimension.portal.ModTeleporter;
@@ -271,7 +271,7 @@ public class TwilightLayerPortalBlock extends Block {
                     }
 
                     Block block = blockstate.getBlock();
-                    if (block == ModBlocks.TWILIGHT_LAYER_PORTAL.get()) {
+                    if (block == BlocksInit.TWILIGHT_LAYER_PORTAL.get()) {
                         ++this.portalBlockCount;
                     }
 
@@ -309,7 +309,7 @@ public class TwilightLayerPortalBlock extends Block {
 
         protected boolean canConnect(BlockState pos) {
             Block block = pos.getBlock();
-            return pos.isAir() || block == ModBlocks.TWILIGHT_LAYER_PORTAL.get();
+            return pos.isAir() || block == BlocksInit.TWILIGHT_LAYER_PORTAL.get();
         }
 
         public boolean isValid() {
@@ -321,7 +321,7 @@ public class TwilightLayerPortalBlock extends Block {
                 BlockPos blockpos = this.bottomLeft.relative(this.rightDir, i);
 
                 for(int j = 0; j < this.height; ++j) {
-                    this.level.setBlock(blockpos.above(j), ModBlocks.TWILIGHT_LAYER_PORTAL.get().defaultBlockState().setValue(TwilightLayerPortalBlock.AXIS, this.axis), 18);
+                    this.level.setBlock(blockpos.above(j), BlocksInit.TWILIGHT_LAYER_PORTAL.get().defaultBlockState().setValue(TwilightLayerPortalBlock.AXIS, this.axis), 18);
                 }
             }
 
